@@ -3,7 +3,7 @@ FROM python:3.8.12
 RUN pip install tensorflow==2.10 \
     pip install keras==2.6 \
     pip install tensorflow-estimator==2.6 \
-    pip install ray[rllib]==1.8 \
+    pip install ray[rllib]==2.2 \
     pip install gym-retro \
     && pip install opencv-python
 
