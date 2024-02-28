@@ -1,11 +1,10 @@
-FROM python:3.8.12
+FROM python:3.7
 
-RUN pip install --upgrade pip\
-    pip install tensorflow==2.10 \
+RUN pip install tensorflow==2.10 \
     pip install keras==2.10 \
     pip install tensorflow-estimator==2.10 \
     pip install ray[rllib]==2.2 \
-    pip install gym\
+    pip install gym-retro \
     && pip install opencv-python
 
 RUN apt-get update && apt-get install -y curl 
