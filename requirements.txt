@@ -1,0 +1,6 @@
+tensorflow==2.10
+keras==2.10
+tensorflow-estimator==2.10
+ray[rllib]==2.2
+gym-retro==0.8
+opencv-python==4.9
