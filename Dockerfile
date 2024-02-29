@@ -1,4 +1,4 @@
-FROM python:3.8.12
+FROM python:3.7
 
 RUN pip install tensorflow==2.10 \
     pip install keras==2.10 \
