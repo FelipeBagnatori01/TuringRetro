@@ -1,7 +1,5 @@
 import argparse
-import numpy as np
 
-import retro
 from utils import retro_wrappers
 
 import ray
@@ -9,16 +7,15 @@ from ray.rllib.agents import ppo, impala, dqn
 from utils.rllib_utils import register_retro, train, test
 
 parser = argparse.ArgumentParser()
-parser.add_argument("game", type=str)
-parser.add_argument("state", type=str)
+parser.add_argument("-g","--game", type=str)
+parser.add_argument("-st","--state", type=str)
 parser.add_argument("-c", "--checkpoint", type=str)
-parser.add_argument("-t", "--train", action="store_true")
+parser.add_argument("-t", "--train", action="store_true",default=False)
 parser.add_argument("-a", "--agent", type=str, default="PPO")
 parser.add_argument("-f", "--framework", type=str, default="tf")
 parser.add_argument("-e", "--episodes", type=int, default=1)
 parser.add_argument("-r", "--record", action="store_true")
 parser.add_argument("-s", "--scenario", type=str, default="scenario")
-
 args = parser.parse_args()
 
 if __name__ == "__main__":

@@ -1,10 +1,10 @@
-FROM python:3.7.9
+FROM python:3.8.12
+FROM tensorflow/tensorflow:2.12.0-gpu
 
-RUN pip install tensorflow==2.10 \
-    pip install keras==2.10 \
-    pip install tensorflow-estimator==2.10 \
-    pip install ray[rllib]==2.2 \
-    ##pip install --use-pep517 gym-retro==0.8 \
+RUN pip install keras==2.12 \
+    pip install tensorflow-estimator==2.12 \
+    pip install ray[rllib]==2.4\
+    pip install gym-retro \
     && pip install opencv-python
 
 RUN apt-get update && apt-get install -y curl 
